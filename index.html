@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joao Vitor Lima da Silva — Portfólio</title>
+<meta name="description" content="Portfólio de desenvolvedor full-stack: projetos, stack e contato.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: {
+      bg: '#13111C', canvas: '#0D0C14', raised: '#252134', card: '#1C1A29',
+      edge: '#312C45', hair: '#1D1B2D', ink: '#B3B3E6', dim: '#5E5C86',
+      accent: '#A78BFE', link: '#B9A3D8', brand: '#553F83', good: '#22C55E'
+    },
+    fontFamily: {
+      serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+      sans: ['Inter', 'system-ui', 'sans-serif'],
+      mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+    }
+  } }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:#13111C; color:#fff; font-family:Inter,system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  h1,h2 { font-family:"IBM Plex Serif",Georgia,serif; font-weight:500; letter-spacing:-0.03em; }
+  .sky {
+    background:
+      radial-gradient(1200px 500px at 50% -10%, rgba(167,139,254,.35), transparent 60%),
+      radial-gradient(700px 300px at 85% 30%, rgba(185,163,216,.18), transparent 70%),
+      linear-gradient(180deg,#2a2146 0%, #1d1830 45%, #13111C 100%);
+  }
+  .stars {
+    background-image:
+      radial-gradient(1px 1px at 12% 20%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 28% 60%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 47% 15%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 63% 45%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 78% 18%, #fff 50%, transparent 51%),
+      radial-gradient(1.5px 1.5px at 90% 55%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 8% 75%, #fff 50%, transparent 51%),
+      radial-gradient(1px 1px at 55% 80%, #fff 50%, transparent 51%);
+    opacity:.55;
+  }
+  .grid-bg {
+    background-image: linear-gradient(#1D1B2D 1px, transparent 1px), linear-gradient(90deg,#1D1B2D 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+  }
+  .card { background:#1C1A29; border:1px solid #312C45; border-radius:12px; transition:transform .2s, border-color .2s; }
+  .card:hover { transform:translateY(-3px); border-color:#A78BFE; }
+  .pulse { animation:pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.35} }
+  .reveal { opacity:0; transform:translateY(14px); transition:all .6s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none} .pulse{animation:none} html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-canvas/70 border-b border-hair">
+  <nav class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2 font-semibold">
+      <span class="w-6 h-6 rounded-md bg-brand grid place-items-center text-xs font-mono text-white">JV</span>
+      Joao Vitor Lima da Silva
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-sm text-ink">
+      <a href="#projetos" class="hover:text-white">Projetos</a>
+      <a href="#stack" class="hover:text-white">Stack</a>
+      <a href="#sobre" class="hover:text-white">Sobre</a>
+    </div>
+    <a href="#contato" class="text-sm px-3.5 py-1.5 rounded-lg bg-brand hover:bg-[#6a4ea3] transition">Contato →</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="sky relative pt-36 pb-28 overflow-hidden">
+  <div class="stars absolute inset-0"></div>
+  <div class="relative max-w-4xl mx-auto px-4 text-center">
+    <div class="inline-flex items-center gap-2 rounded-full bg-raised px-3 py-1 text-xs text-ink mb-8">
+      <span class="w-2 h-2 rounded-full bg-good pulse"></span> Disponível para novos projetos
+    </div>
+    <h1 class="text-[2.5rem] sm:text-6xl leading-[1.05]">Construo produtos digitais que<br class="hidden sm:block"> vão do protótipo ao ar.</h1>
+    <p class="mt-6 text-ink text-lg max-w-2xl mx-auto">Desenvolvedor full-stack focado em interfaces limpas, backends confiáveis e deploys sem drama. Do design ao <span class="text-link underline underline-offset-4 decoration-edge">código em produção</span>.</p>
+    <div class="mt-9 flex flex-wrap justify-center gap-3">
+      <a href="#projetos" class="px-5 py-2.5 rounded-lg bg-brand hover:bg-[#6a4ea3] font-medium transition">Ver projetos →</a>
+      <a href="#contato" class="px-5 py-2.5 rounded-lg bg-black/35 hover:bg-black/55 border border-edge transition">Falar comigo</a>
+    </div>
+  </div>
+
+  <!-- terminal mock -->
+  <div class="relative max-w-3xl mx-auto px-4 mt-16">
+    <div class="rounded-xl border border-edge bg-canvas/90 shadow-2xl shadow-black/50 overflow-hidden">
+      <div class="flex items-center gap-2 px-4 py-2.5 border-b border-hair">
+        <span class="w-2.5 h-2.5 rounded-full bg-edge"></span><span class="w-2.5 h-2.5 rounded-full bg-edge"></span><span class="w-2.5 h-2.5 rounded-full bg-edge"></span>
+        <span class="ml-3 text-xs font-mono text-dim">~/portfolio</span>
+      </div>
+      <pre class="p-5 text-sm font-mono leading-7 overflow-x-auto"><span class="text-dim">$</span> <span class="text-white">whoami</span>
+<span class="text-ink">joao-vitor — full-stack developer</span>
+<span class="text-dim">$</span> <span class="text-white">deploy --all</span>
+<span class="text-accent">✓</span> <span class="text-ink">12 projetos publicados</span>
+<span class="text-accent">✓</span> <span class="text-ink">5+ anos de experiência</span>
+<span class="text-good">●</span> <span class="text-ink">All systems operational</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <p class="font-mono text-xs text-accent uppercase tracking-widest reveal">Trabalhos selecionados</p>
+    <h2 class="text-4xl sm:text-5xl mt-3 reveal">Projetos recentes</h2>
+    <div id="projects-grid" class="mt-12 grid gap-5 md:grid-cols-3">
+      <article class="card p-6 reveal">
+        <div class="h-36 rounded-lg mb-5 bg-gradient-to-br from-brand to-canvas grid place-items-center font-mono text-xs text-ink">preview</div>
+        <h3 class="font-semibold text-lg">Plataforma SaaS</h3>
+        <p class="text-ink text-sm mt-2">Dashboard multi-tenant com cobrança recorrente e métricas em tempo real.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-link"><span class="px-2 py-1 rounded-md bg-raised">Next.js</span><span class="px-2 py-1 rounded-md bg-raised">Postgres</span><span class="px-2 py-1 rounded-md bg-raised">Stripe</span></div>
+      </article>
+      <article class="card p-6 reveal">
+        <div class="h-36 rounded-lg mb-5 bg-gradient-to-br from-[#3b2a63] to-canvas grid place-items-center font-mono text-xs text-ink">preview</div>
+        <h3 class="font-semibold text-lg">App de automações</h3>
+        <p class="text-ink text-sm mt-2">Orquestração de workflows com filas, webhooks e integrações via API.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-link"><span class="px-2 py-1 rounded-md bg-raised">Node</span><span class="px-2 py-1 rounded-md bg-raised">Redis</span><span class="px-2 py-1 rounded-md bg-raised">Docker</span></div>
+      </article>
+      <article class="card p-6 reveal">
+        <div class="h-36 rounded-lg mb-5 bg-gradient-to-br from-[#2d2250] to-canvas grid place-items-center font-mono text-xs text-ink">preview</div>
+        <h3 class="font-semibold text-lg">Site institucional</h3>
+        <p class="text-ink text-sm mt-2">Landing page de alta performance com SEO e 100 no Lighthouse.</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-link"><span class="px-2 py-1 rounded-md bg-raised">Tailwind</span><span class="px-2 py-1 rounded-md bg-raised">Astro</span><span class="px-2 py-1 rounded-md bg-raised">CDN</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section id="stack" class="py-24 relative bg-canvas border-y border-hair">
+  <div class="grid-bg absolute inset-0"></div>
+  <div class="relative max-w-6xl mx-auto px-4">
+    <p class="font-mono text-xs text-accent uppercase tracking-widest reveal">Ferramentas</p>
+    <h2 class="text-4xl sm:text-5xl mt-3 reveal">Stack do dia a dia</h2>
+    <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4">
+      <div class="card p-5 reveal"><p class="font-mono text-xs text-dim">Front-end</p><p class="mt-2 font-medium">React · Next.js · Tailwind</p></div>
+      <div class="card p-5 reveal"><p class="font-mono text-xs text-dim">Back-end</p><p class="mt-2 font-medium">Node · Python · REST</p></div>
+      <div class="card p-5 reveal"><p class="font-mono text-xs text-dim">Dados</p><p class="mt-2 font-medium">Postgres · Supabase · Redis</p></div>
+      <div class="card p-5 reveal"><p class="font-mono text-xs text-dim">Infra</p><p class="mt-2 font-medium">Docker · CI/CD · Railway</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-24">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+    <div class="reveal">
+      <p class="font-mono text-xs text-accent uppercase tracking-widest">Sobre</p>
+      <h2 class="text-4xl sm:text-5xl mt-3">A forma tranquila de entregar software.</h2>
+      <p class="text-ink mt-6 leading-relaxed">Sou apaixonado por transformar ideias em produtos que funcionam. Gosto de código simples, deploys automáticos e comunicação clara com quem está do outro lado.</p>
+      <p class="text-ink mt-4 leading-relaxed">Troque este texto pela sua história, experiência e o que te diferencia.</p>
+    </div>
+    <div class="grid grid-cols-3 gap-4 reveal">
+      <div class="card p-5 text-center"><p class="font-serif text-4xl">5+</p><p class="text-xs text-ink mt-1">anos</p></div>
+      <div class="card p-5 text-center"><p class="font-serif text-4xl">40+</p><p class="text-xs text-ink mt-1">projetos</p></div>
+      <div class="card p-5 text-center"><p class="font-serif text-4xl">99%</p><p class="text-xs text-ink mt-1">uptime</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contato" class="sky relative py-28 overflow-hidden">
+  <div class="stars absolute inset-0"></div>
+  <div class="relative max-w-3xl mx-auto px-4 text-center reveal">
+    <h2 class="text-4xl sm:text-6xl leading-tight">Vamos colocar sua ideia no ar?</h2>
+    <p class="text-ink mt-5 text-lg">Conte o que você precisa e respondo em até 24 horas.</p>
+    <div class="mt-9 flex flex-wrap justify-center gap-3">
+      <a href="mailto:joaovitorlimasp2@gmail.com" class="px-6 py-3 rounded-lg bg-brand hover:bg-[#6a4ea3] font-medium transition">joaovitorlimasp2@gmail.com →</a>
+      <a href="#" class="px-6 py-3 rounded-lg bg-black/35 hover:bg-black/55 border border-edge transition">GitHub</a>
+      <a href="#" class="px-6 py-3 rounded-lg bg-black/35 hover:bg-black/55 border border-edge transition">LinkedIn</a>
+    </div>
+
+    <form id="contact-form" class="mt-12 text-left card p-6 space-y-4" novalidate>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <label class="block text-sm text-ink">Nome
+          <input name="name" required maxlength="120" class="mt-1 w-full rounded-lg bg-canvas border border-edge px-3 py-2 text-white focus:outline-none focus:border-accent">
+        </label>
+        <label class="block text-sm text-ink">E-mail
+          <input name="email" type="email" required maxlength="254" class="mt-1 w-full rounded-lg bg-canvas border border-edge px-3 py-2 text-white focus:outline-none focus:border-accent">
+        </label>
+      </div>
+      <label class="block text-sm text-ink">Mensagem
+        <textarea name="message" required maxlength="5000" rows="4" class="mt-1 w-full rounded-lg bg-canvas border border-edge px-3 py-2 text-white focus:outline-none focus:border-accent"></textarea>
+      </label>
+      <div class="flex items-center gap-4">
+        <button type="submit" class="px-6 py-2.5 rounded-lg bg-brand hover:bg-[#6a4ea3] font-medium transition disabled:opacity-50">Enviar mensagem →</button>
+        <p id="form-status" class="text-sm text-ink" role="status"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="py-8 text-center text-xs text-dim font-mono border-t border-hair">
+  © 2026 Joao Vitor Lima da Silva · Feito com Tailwind
+</footer>
+
+<script>
+// Supabase (chave publishable: segura no front-end, protegida por RLS)
+const SB_URL = 'https://scmqntgxetacfnyqgwbr.supabase.co';
+const SB_KEY = 'sb_publishable_bAc1rgMVo205CpSQMmpBJg_LNxD4ILl';
+const sbHeaders = { apikey: SB_KEY, Authorization: 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' };
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// Projetos vindos do banco (mantém o HTML estático como fallback)
+fetch(SB_URL + '/rest/v1/portfolio_projects?select=title,description,tags,url&order=position', { headers: sbHeaders })
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(rows => {
+    if (!rows.length) return;
+    document.getElementById('projects-grid').innerHTML = rows.map(p => `
+      <article class="card p-6 in">
+        <div class="h-36 rounded-lg mb-5 bg-gradient-to-br from-brand to-canvas grid place-items-center font-mono text-xs text-ink">preview</div>
+        <h3 class="font-semibold text-lg">${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title)}</h3>
+        <p class="text-ink text-sm mt-2">${esc(p.description)}</p>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs font-mono text-link">${(p.tags||[]).map(t => `<span class="px-2 py-1 rounded-md bg-raised">${esc(t)}</span>`).join('')}</div>
+      </article>`).join('');
+  }).catch(() => {});
+
+// Formulário de contato
+const form = document.getElementById('contact-form'), status = document.getElementById('form-status');
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(form));
+  if (!d.name.trim() || !/^\S+@\S+\.\S+$/.test(d.email) || !d.message.trim()) { status.textContent = 'Preencha nome, e-mail válido e mensagem.'; return; }
+  const btn = form.querySelector('button'); btn.disabled = true; status.textContent = 'Enviando…';
+  try {
+    const r = await fetch(SB_URL + '/rest/v1/portfolio_contacts', { method: 'POST', headers: { ...sbHeaders, Prefer: 'return=minimal' }, body: JSON.stringify({ name: d.name.trim(), email: d.email.trim(), message: d.message.trim() }) });
+    if (!r.ok) throw new Error();
+    form.reset(); status.textContent = 'Mensagem enviada! Obrigado.';
+  } catch { status.textContent = 'Não foi possível enviar. Tente pelo e-mail acima.'; }
+  btn.disabled = false;
+});
+
+const io =new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
